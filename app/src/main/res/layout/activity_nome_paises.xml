@@ -60,8 +60,8 @@
         android:gravity="center"
         android:hint="digite um pais"
         android:inputType="textPersonName"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -71,9 +71,9 @@
         android:layout_width="315dp"
         android:layout_height="299dp"
         android:layout_marginTop="32dp"
+        android:background="@drawable/ic_mundi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic__mundi" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

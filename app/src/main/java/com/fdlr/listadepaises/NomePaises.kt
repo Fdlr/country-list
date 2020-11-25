@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.fdlr.listadepaises.model.Item
 
 class NomePaises : AppCompatActivity() {
 
@@ -24,7 +25,9 @@ class NomePaises : AppCompatActivity() {
                 Toast.makeText(this, "Digite um nome de pais.", Toast.LENGTH_SHORT).show()
             } else {
                 val resultIntent = this.intent
-                resultIntent.putExtra("nome", editText?.text.toString())
+                resultIntent.putExtra(
+                    "item", editText?.text
+                )
                 setResult(Activity.RESULT_OK, resultIntent)
                 finish()
             }
