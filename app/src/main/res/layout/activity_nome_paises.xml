@@ -68,8 +68,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="315dp"
-        android:layout_height="299dp"
+        android:layout_width="326dp"
+        android:layout_height="208dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/ic_mundi"
         app:layout_constraintEnd_toEndOf="parent"
