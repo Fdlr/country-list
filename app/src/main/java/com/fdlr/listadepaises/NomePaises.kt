@@ -7,6 +7,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.fdlr.listadepaises.model.Item
 import com.fdlr.listadepaises.utils.Constant
+import com.fdlr.listadepaises.utils.Constant.ESTADAOWEB
+import com.fdlr.listadepaises.utils.Constant.GUMWEB
+import com.fdlr.listadepaises.utils.Constant.RSETEWEB
 
 class NomePaises : AppCompatActivity() {
     var buttoneSalvar: Button? = null
@@ -23,9 +26,10 @@ class NomePaises : AppCompatActivity() {
         buttoneSalvar?.setOnClickListener {
             val nome = editText?.text.toString()
             if (nome == "") {
-                Toast.makeText(this, "Digite um nome de pais.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Digite um nome de site.", Toast.LENGTH_SHORT).show()
             } else {
                 getCountry(nome)
+
             }
         }
 
@@ -36,10 +40,10 @@ class NomePaises : AppCompatActivity() {
 
     private fun getCountry(name: String) {
         when (name) {
-            Constant.BRASIL -> MainActivity.items.add(Item(name, R.drawable.brasil))
-            Constant.USA -> MainActivity.items.add(Item(name, R.drawable.usa))
-            Constant.JAPAO -> MainActivity.items.add(Item(name, R.drawable.japao))
-            else -> MainActivity.items.add(Item(Constant.PAISDEFAULT, R.drawable.ic_mundi))
+            Constant.GUM -> MainActivity.items.add(Item(name, R.drawable.gone, GUMWEB))
+            Constant.RSETE -> MainActivity.items.add(Item(name, R.drawable.rsete_logo, RSETEWEB))
+            Constant.ESTADAO -> MainActivity.items.add(Item(name, R.drawable.estadao, ESTADAOWEB))
+            else -> MainActivity.items.add(Item(Constant.SITEDEFAULT, R.drawable.ic_mundi,""))
         }
         navigateToMain()
     }

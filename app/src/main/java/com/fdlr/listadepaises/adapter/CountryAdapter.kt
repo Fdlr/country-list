@@ -6,9 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatImageView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.fdlr.listadepaises.R
 import com.fdlr.listadepaises.model.Item
+import com.fdlr.listadepaises.utils.Constant.GUM
+import com.fdlr.listadepaises.utils.Constant.GUMWEB
+import com.fdlr.listadepaises.utils.OpeningNetworking
 
 class CountryAdapter(nameList: List<Item>, private var ctx: Context) :
     RecyclerView.Adapter<CountryAdapter.ViewHolder>() {
@@ -28,6 +32,12 @@ class CountryAdapter(nameList: List<Item>, private var ctx: Context) :
 
         holder.name.text = item.name
         holder.imagem.setBackgroundResource(item.img)
+
+        if (item.andress != "") {
+            holder.itemList.setOnClickListener {
+                OpeningNetworking.openNetwork(ctx, "", "", item.andress)
+            }
+        }
     }
 
     // Devolve quantidade de itens do nameList
@@ -38,6 +48,7 @@ class CountryAdapter(nameList: List<Item>, private var ctx: Context) :
     // Aqui é a criação dos itens do viewholder
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var name = view.findViewById<TextView>(R.id.countryName)
-        var imagem = view.findViewById<AppCompatImageView>(R.id.imgAAAA)!!
+        var imagem = view.findViewById<AppCompatImageView>(R.id.imgAAAA)
+        var itemList = view.findViewById<ConstraintLayout>(R.id.itemList)
     }
 }

@@ -15,7 +15,7 @@
         android:layout_marginEnd="45dp"
         android:layout_marginRight="45dp"
         android:contentDescription="salvar botão"
-        android:text="SALVAR"
+        android:text="PROCURAR"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,7 +44,7 @@
         android:fontFamily="serif"
         android:gravity="center"
         android:scrollHorizontally="false"
-        android:text="Qual pais vc gostaria de adcionar?"
+        android:text="Qual s site gostaria de adcionar?"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,7 +58,7 @@
         android:backgroundTint="@color/black"
         android:ems="10"
         android:gravity="center"
-        android:hint="digite um pais"
+        android:hint="digite um site de notícias"
         android:inputType="textPersonName"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
@@ -68,11 +68,12 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="326dp"
-        android:layout_height="208dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/ic_mundi"
+        android:layout_width="387dp"
+        android:layout_height="146dp"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/sites_noticias"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
