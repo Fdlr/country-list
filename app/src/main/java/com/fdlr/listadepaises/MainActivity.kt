@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.fdlr.listadepaises.adapter.CountryAdapter
 import com.fdlr.listadepaises.model.Item
+import com.fdlr.listadepaises.utils.Constant
 
 class MainActivity : AppCompatActivity() {
     var buttonInsert: Button? = null
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         buttonInsert = findViewById(R.id.button_adc)
         list = findViewById(R.id.recyclerView)
         initView()
+        getCats()
 
         buttonInsert?.setOnClickListener {
             val intent = Intent(this, NomePaises::class.java)
@@ -33,6 +35,13 @@ class MainActivity : AppCompatActivity() {
         linearLayoutManager = LinearLayoutManager(this)
         list?.layoutManager = linearLayoutManager
         list?.adapter = listaAdapter
+    }
+
+    private fun getCats(){
+        items.add(Item("Xaropinho", R.drawable.cats_a,""))
+        items.add(Item("Ronald", R.drawable.cat_b,""))
+        items.add(Item("Canela", R.drawable.cat_c,""))
+        items.add(Item("Rambo", R.drawable.cat_d,""))
     }
 
     override fun onResume() {

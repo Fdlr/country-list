@@ -26,7 +26,7 @@ class NomePaises : AppCompatActivity() {
         buttoneSalvar?.setOnClickListener {
             val nome = editText?.text.toString()
             if (nome == "") {
-                Toast.makeText(this, "Digite um nome de site.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Digite um nome do Gato.", Toast.LENGTH_SHORT).show()
             } else {
                 getCountry(nome)
 
@@ -40,10 +40,10 @@ class NomePaises : AppCompatActivity() {
 
     private fun getCountry(name: String) {
         when (name) {
-            Constant.GUM -> MainActivity.items.add(Item(name, R.drawable.gone, GUMWEB))
-            Constant.RSETE -> MainActivity.items.add(Item(name, R.drawable.rsete_logo, RSETEWEB))
-            Constant.ESTADAO -> MainActivity.items.add(Item(name, R.drawable.estadao, ESTADAOWEB))
-            else -> MainActivity.items.add(Item(Constant.SITEDEFAULT, R.drawable.ic_mundi,""))
+            Constant.EMY -> MainActivity.items.add(Item(name, R.drawable.gone, ""))
+            Constant.BONITAO -> MainActivity.items.add(Item(name, R.drawable.rsete_logo, ""))
+            Constant.CLEDY -> MainActivity.items.add(Item(name, R.drawable.estadao, ""))
+            else -> MainActivity.items.add(Item(Constant.SITEDEFAULT, R.drawable.cat_defaut,""))
         }
         navigateToMain()
     }
